@@ -1,7 +1,7 @@
 # JohnsonMFB
 
 ## overview
-This java application simulates a basic bank allowing users to perform operations such as depositing money withdrawing funds, and checking their account balance .The code is designed using Object-Oriented Prograsmming (OOP) concepts,including inheritance, polymorphism, abstraction,and encapsulation.
+This java application simulates a basic bank allowing users to perform operations such as depositing money withdrawing funds, and checking their account balance .The code is designed using Object-Oriented Programming (OOP) concepts,including inheritance, polymorphism, abstraction,and encapsulation.
 
 ## Table of Content
 * [Features](#features)
