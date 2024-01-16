@@ -1,6 +1,6 @@
-public class Bank {
+abstract public class Bank {
     //attributes
-    private double balance;
+    protected double balance;
     // constructor
     public Bank(){
         this.balance = 0;
@@ -14,24 +14,10 @@ public class Bank {
     public double getBalance(){
         return balance;
     }
+
     // adding money to account
-    public void topUp(double amount){
-        if(amount > 0){
-            balance += amount;
-            System.out.println("Topup Successful: Current Balance: "+ balance);
-        } else{
-            System.out.println("Invalid amount for topup!!");
-        }
-    }
+    public abstract void topUp(double amount);
+
     // withdrawing money from account
-    public void withdraw(double amount){
-        if (amount > 0 && amount <= balance ){
-            balance -= amount;
-            System.out.println("Withdrawal Successful: Current Balance: "+ balance);
-        } else if(amount == 0 || amount >= balance){
-            System.out.println("Insuficient funds!!");
-        } else {
-            System.out.println("Invalid Withdrawal amount!!");
-        }
-    }
+    public abstract void withdraw(double amount);
 }

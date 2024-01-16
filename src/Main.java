@@ -6,7 +6,7 @@ public class Main {
 
         System.out.print("Enter initial balance for Bank account: ");
         double initialBalance = scanner.nextDouble();
-        Bank bank = new Bank(initialBalance);
+        BankAccount bank = new BankAccount(initialBalance);
 
         while (true){
             System.out.println("\n Choose an option:");
