@@ -1,14 +1,17 @@
+import java.math.BigDecimal;
+
 class BankAccount extends Bank {
 
     //constructor calling the superclass
-    public BankAccount(double initialBalance){
-        super(initialBalance);
+    public BankAccount(){
+        super();
     }
     //implementation of the deposit method
     @Override
-    public void topUp(double amount){
-        if(amount > 0){
-            balance += amount;
+    public void topUp(BigDecimal amount){
+        //  compareTo returns -1(less than), 0(Equal), 1(greater than) according to values
+        if(amount.compareTo(BigDecimal.ZERO) > 0){
+            balance = balance.add(amount);
             System.out.println("Topup Successful: Current Balance: "+ balance);
         } else{
             System.out.println("Invalid amount for topup!!");
@@ -16,12 +19,12 @@ class BankAccount extends Bank {
     }
 
     @Override
-    public void withdraw(double amount){
-        if (amount > 0 && amount <= balance ){
-            balance -= amount;
+    public void withdraw(BigDecimal amount){
+        if (amount.compareTo(BigDecimal.ZERO) > 0 && amount.compareTo(balance) <= 0 ){
+            balance = balance.subtract(amount);
             System.out.println("Withdrawal Successful: Current Balance: "+ balance);
-        } else if(amount >= balance){
-            System.out.println("Insuficient funds!!");
+        } else if(amount.compareTo(balance) >= 0){
+            System.out.println("Insufficient funds!!");
         } else {
             System.out.println("Invalid Withdrawal amount!!");
         }

@@ -1,23 +1,22 @@
+import java.math.BigDecimal;
+
 abstract public class Bank {
     //attributes
-    protected double balance;
+    protected BigDecimal balance;
     // constructor
     public Bank(){
-        this.balance = 0;
-    }
-    public Bank(double initialBalance){
-        this.balance = initialBalance;
+        this.balance = BigDecimal.ZERO;
     }
 
     //methods
     // check account balance
-    public double getBalance(){
+    public BigDecimal getBalance(){
         return balance;
     }
 
     // adding money to account
-    public abstract void topUp(double amount);
+    public abstract void topUp(BigDecimal amount);
 
     // withdrawing money from account
-    public abstract void withdraw(double amount);
+    public abstract void withdraw(BigDecimal amount);
 }

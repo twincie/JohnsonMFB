@@ -1,12 +1,12 @@
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter initial balance for Bank account: ");
-        double initialBalance = scanner.nextDouble();
-        BankAccount bank = new BankAccount(initialBalance);
+        System.out.print("Welcome to JohnsonMFB ");
+        BankAccount bank = new BankAccount();
 
         while (true){
             System.out.println("\n Choose an option:");
@@ -22,11 +22,11 @@ public class Main {
                 System.out.println("Account balance: "+ bank.getBalance());
             } else if (choice == 2){
                 System.out.print("Enter top-up amount: ");
-                double topUpAmount = scanner.nextDouble();
+                BigDecimal topUpAmount = scanner.nextBigDecimal();
                 bank.topUp(topUpAmount);
             } else if (choice == 3){
                 System.out.print("Enter withdrawal amount: ");
-                double withdrawalAmount = scanner.nextDouble();
+                BigDecimal withdrawalAmount = scanner.nextBigDecimal();
                 bank.withdraw(withdrawalAmount);
             } else if (choice == 4){
                 System.out.println("Exiting.....");
