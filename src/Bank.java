@@ -3,8 +3,11 @@ import java.math.BigDecimal;
 abstract public class Bank {
     //attributes
     protected BigDecimal balance;
+    protected BigDecimal bankAccountBalance;
+
     // constructor
     public Bank(){
+        this.bankAccountBalance = BigDecimal.ZERO;
         this.balance = BigDecimal.ZERO;
     }
 
@@ -12,6 +15,10 @@ abstract public class Bank {
     // check account balance
     public BigDecimal getBalance(){
         return balance;
+    }
+
+    public BigDecimal getBankAccountBalance(){
+        return bankAccountBalance;
     }
 
     // adding money to account
