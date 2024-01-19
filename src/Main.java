@@ -20,29 +20,33 @@ public class Main {
         System.out.println("3. Exit");
         System.out.print("Choice: ");
     }
+    //
+    static void bankingMenu(){
+        System.out.println("\n Choose an option:");
+        System.out.println("1. Check Bank Account Balance");
+        System.out.println("2. Check Balance");
+        System.out.println("3. TopUp");
+        System.out.println("4. Withdrawal");
+        System.out.println("5. Exit");
+        System.out.println("6. Back");
+        System.out.print("Choice: ");
+    }
     // Banking options for JohnsonMFB
     static void johnsonMFB(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("\n-Welcome to JohnsonMFB-");
         JohnsonMFB bank = new JohnsonMFB();
+        System.out.println("\n-Welcome to JohnsonMFB-");
+        System.out.println("**Note** bank transaction charges is " +bank.GetBankFees());
 
         while (true){
-            System.out.println("\n Choose an option:");
-            System.out.println("1. Check Bank Account Balance");
-            System.out.println("2. Check Balance");
-            System.out.println("3. TopUp");
-            System.out.println("4. Withdrawal");
-            System.out.println("5. Exit");
-            System.out.println("6. Back");
-            System.out.print("Choice: ");
-
+            bankingMenu();
             int choice = scanner.nextInt();
-
             if (choice == 1){
                 System.out.println("Bank Account balance: "+ bank.getBankAccountBalance());
             } else if (choice == 2){
                 System.out.println("Your Account balance: "+ bank.getBalance());
             } else if (choice == 3){
+                System.out.println("Top-up amount should be from 50 and above.");
                 System.out.print("Enter top-up amount: ");
                 BigDecimal topUpAmount = scanner.nextBigDecimal();
                 bank.topUp(topUpAmount);
@@ -65,21 +69,13 @@ public class Main {
     //Banking options for OyebodeMFB
     static void oyebodeMFB(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("\n-Welcome to OyebodeMFB-");
         OyebodeMFB bank1 = new OyebodeMFB();
+        System.out.println("\n-Welcome to OyebodeMFB-");
+        System.out.println("**Note** bank transaction charges is " +bank1.GetBankFees());
 
         while (true){
-            System.out.println("\n Choose an option:");
-            System.out.println("1. Check Bank Account Balance");
-            System.out.println("2. Check Balance");
-            System.out.println("3. TopUp");
-            System.out.println("4. Withdrawal");
-            System.out.println("5. Exit");
-            System.out.println("6. Back");
-            System.out.print("Choice: ");
-
+            bankingMenu();
             int choice = scanner.nextInt();
-
             if (choice == 1){
                 System.out.println("Bank Account balance: "+ bank1.getBankAccountBalance());
             } else if (choice == 2){
