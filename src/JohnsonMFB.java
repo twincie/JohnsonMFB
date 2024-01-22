@@ -20,7 +20,6 @@ class JohnsonMFB extends Bank {
                 System.out.println("Free Transaction");
             }
             System.out.println("Current Balance: " +balance);
-//            chargeFees();
         } else {
             System.out.println("Invalid amount for topup!!");
         }

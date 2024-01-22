@@ -27,6 +27,10 @@ abstract public class Bank {
     public void setFees(int fees){
         this.fees = BigDecimal.valueOf(fees);
     }
+
+    public void setFees(double fees){
+        this.fees = BigDecimal.valueOf(fees);
+    }
     public BigDecimal GetBankFees() { return fees; }
 
     // adding money to account
