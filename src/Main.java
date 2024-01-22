@@ -20,7 +20,7 @@ public class Main {
         System.out.println("3. Exit");
         System.out.print("Choice: ");
     }
-    //
+    // This is the main banking options
     static void bankingMenu(){
         System.out.println("\n Choose an option:");
         System.out.println("1. Check Bank Account Balance");
@@ -36,7 +36,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         JohnsonMFB bank = new JohnsonMFB();
         System.out.println("\n-Welcome to JohnsonMFB-");
-        System.out.println("**Note** bank transaction charges is " +bank.GetBankFees());
+        System.out.println("**Note** bank transaction charges is " +bank.GetBankFees()+ " currency.");
 
         while (true){
             bankingMenu();
@@ -62,7 +62,7 @@ public class Main {
                 int option = scanner.nextInt();
                 mainSwitch(option);
             } else{
-                System.out.println("Invalid Option. Please try again.");
+                System.out.println("Invalid Option. Please choose options from 1-6.");
             }
         }
     }
@@ -71,7 +71,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         OyebodeMFB bank1 = new OyebodeMFB();
         System.out.println("\n-Welcome to OyebodeMFB-");
-        System.out.println("**Note** bank transaction charges is " +bank1.GetBankFees());
+        System.out.println("**Note** bank transaction charges is " +bank1.GetBankFees()+" currency");
 
         while (true){
             bankingMenu();
@@ -96,7 +96,7 @@ public class Main {
                 int option = scanner.nextInt();
                 mainSwitch(option);
             } else {
-                System.out.println("Invalid Option. Please try again.");
+                System.out.println("Invalid Option. Please choose options from 1 to 6.");
             }
         }
     }
